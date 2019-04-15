@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 14px arial;
+        }
+        .clearfix:after {
+            clear: both;
+            content: ".";
+            display: block;
+            height: 0;
+            visibility: hidden;
+        }        
+
+        header {
+            height: 100vh;
+            background-color: yellow;
+        }
+        header>nav {
+            position: absolute;
+            bottom: 0;
+            background-color: #000;
+            width: 100%;
+        }
+
+        header>nav>ul {
+            list-style-type: none;
+        }
+
+        header>nav>ul>li {
+            position: relative;
+            float: left;
+        }
+
+        header>nav>ul>li>a {
+            text-decoration: none;
+            display: inline-block;
+            color: #fff;
+            padding: 5px 10px;
+        }
+
+        header>nav>ul>li>a:hover {
+            background-color: red;
+        }
+        #ctr > section {
+            position:relative;
+            float:left;
+            left:0;
+            top:0;
+            width:calc( 100% - 300px );
+            background-color  :red;
+            box-sizing: border-box;
+            padding:20px;
+        }
+        #ctr > section > article {
+            background-color:#fff;
+            margin-bottom:10px;
+        }
+        #ctr > section > article > span {
+            position:relative;
+            float:right;
+            margin:0 0 10px 10px;
+            width:100px;
+            height:100px;
+            background-image:url(html.jpg);
+            background-size: 100% auto;
+    background-position: center center;         
+        }
+        #ctr > section > article.art_html > span {
+            background-image:url(img/html.jpg);
+        }
+        #ctr > section > article.art_css > span {
+            background-image:url(img/css.jpeg);
+        }
+
+        #ctr > aside {
+            position:relative;
+            float:right;
+            right:0;
+            top:0;
+            width:300px;                
+            background-color  :green;
+        }
+        footer {
+            height:50px;
+            background-color:blue;
+        }       
+
+        @media screen and (max-width:600px) {
+            header>nav {
+                position: absolute;
+                top: 30px;
+                float: right;
+                right: 0;
+                bottom: initial;
+                width: initial;
+            }
+            header>nav:before {
+                content: "";
+                width: 30px;
+                height: 30px;
+                background: #000 url(img/burger.gif) no-repeat right 0;
+                position: absolute;
+                top: -30px;
+                right: 0;   
+                cursor:pointer;            
+            }
+            header>nav>ul {
+                display:none;
+            }
+            header>nav:hover>ul{
+                display:block;
+            }
+            header>nav:hover:before {
+                transform: rotate(90deg);
+            }          
+            header>nav>ul>li {
+                float: none;
+            }
+            header>nav>ul>li>a {
+                display: block;
+            }
+            #ctr > * {
+                float:none !important;
+                width:100% !important;
+            }
+            #ctr > section > article > span {
+                float: none;
+                margin: 0 0 10px 0;
+                width: 100%;
+                height: 100px;
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a target="_blank" href="https://caniuse.com/">Can I Use</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://cssauthor.com/html-and-css-cheat-sheets/">Cheat Sheets</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.w3schools.com/html/html5_semantic_elements.asp">HTML5 Semantic Elements</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.tutorialspoint.com/html5/html5_new_tags.htm">HTML5 Tags</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <div id="ctr" class="clearfix">
+        <section>
+                <article class="art_html">
+                        <span></span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dignissimos praesentium facere, consequuntur nihil commodi consequatur! Repellat excepturi aspernatur, non, numquam possimus iure vitae dolorum reiciendis modi totam consectetur maiores?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dignissimos praesentium facere, consequuntur nihil commodi consequatur! Repellat excepturi aspernatur, non, numquam possimus iure vitae dolorum reiciendis modi totam consectetur maiores?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dignissimos praesentium facere, consequuntur nihil commodi consequatur! Repellat excepturi aspernatur, non, numquam possimus iure vitae dolorum reiciendis modi totam consectetur maiores?</p>
+                    </article>
+                    <article>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dignissimos praesentium facere, consequuntur nihil commodi consequatur! Repellat excepturi aspernatur, non, numquam possimus iure vitae dolorum reiciendis modi totam consectetur maiores?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dignissimos praesentium facere, consequuntur nihil commodi consequatur! Repellat excepturi aspernatur, non, numquam possimus iure vitae dolorum reiciendis modi totam consectetur maiores?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dignissimos praesentium facere, consequuntur nihil commodi consequatur! Repellat excepturi aspernatur, non, numquam possimus iure vitae dolorum reiciendis modi totam consectetur maiores?</p>
+                        </article>
+                        <article class="art_css">
+                                <span></span>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dignissimos praesentium facere, consequuntur nihil commodi consequatur! Repellat excepturi aspernatur, non, numquam possimus iure vitae dolorum reiciendis modi totam consectetur maiores?</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dignissimos praesentium facere, consequuntur nihil commodi consequatur! Repellat excepturi aspernatur, non, numquam possimus iure vitae dolorum reiciendis modi totam consectetur maiores?</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dignissimos praesentium facere, consequuntur nihil commodi consequatur! Repellat excepturi aspernatur, non, numquam possimus iure vitae dolorum reiciendis modi totam consectetur maiores?</p>
+                            </article>
+                            <article>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dignissimos praesentium facere, consequuntur nihil commodi consequatur! Repellat excepturi aspernatur, non, numquam possimus iure vitae dolorum reiciendis modi totam consectetur maiores?</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dignissimos praesentium facere, consequuntur nihil commodi consequatur! Repellat excepturi aspernatur, non, numquam possimus iure vitae dolorum reiciendis modi totam consectetur maiores?</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dignissimos praesentium facere, consequuntur nihil commodi consequatur! Repellat excepturi aspernatur, non, numquam possimus iure vitae dolorum reiciendis modi totam consectetur maiores?</p>
+                                </article>
+                    </section>
+        <aside>
+4
+        </aside>
+    </div>
+    <footer></footer>
+
+</body>
+
+</html>
